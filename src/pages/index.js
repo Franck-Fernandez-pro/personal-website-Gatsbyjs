@@ -2,6 +2,7 @@ import React from "react"
 import Nav from "../components/Nav"
 import websiteContent from "../constants"
 import HeaderSection from "../components/HeaderSection"
+import Section from "../components/Section"
 
 import "../css/bootstrap.min.css"
 import "../css/agency.css"
@@ -17,9 +18,11 @@ const IndexPage = () => (
       headerBtns={websiteContent.headerBtns}
     />
     <HeaderSection content={websiteContent.sections.home} />
-
-
-
+    <Section
+      id={websiteContent.sections.atouts.id}
+      title={websiteContent.sections.atouts.title}
+      content={websiteContent.sections.atouts.content}
+    />
 
     {/*
     Section
