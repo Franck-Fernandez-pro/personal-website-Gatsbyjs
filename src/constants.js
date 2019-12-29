@@ -34,6 +34,7 @@ const websiteContent = {
 
     // ---------------------------------------------------------- ATOUTS
     atouts: {
+      id: "atouts",
       title: "Mes Atouts",
       content: [
         {
@@ -59,6 +60,7 @@ const websiteContent = {
 
     // ----------------------------------------------------------
     competences: {
+      id: "comp",
       title: "Mes Compétences",
       content: [
         {
@@ -108,6 +110,7 @@ const websiteContent = {
 
     // ---------------------------------------------------------- ABOUT
     about: {
+      id: "about",
       title: "Mon parcours",
       cv: {
         url: "WARNING Téléchargez<br>mon CV<br>PDF WARNING",
@@ -253,6 +256,7 @@ const websiteContent = {
 
     // ---------------------------------------------------------- INTERET
     interet: {
+      id: "interet",
       title: "Centres d'intérêts",
       content: [
         {
@@ -278,6 +282,7 @@ const websiteContent = {
 
     // ---------------------------------------------------------- CONTACT
     contact: {
+      id: "contact",
       title: "Contactez moi !",
       content: [
         {
