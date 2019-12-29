@@ -3,8 +3,8 @@ import Nav from "../components/Nav"
 import websiteContent from "../constants"
 import HeaderSection from "../components/HeaderSection"
 
-import "../components/bootstrap.min.css"
-import "../components/agency.css"
+import "../css/bootstrap.min.css"
+import "../css/agency.css"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
