@@ -1,7 +1,8 @@
 import React from "react"
 import Nav from "../components/Nav"
-import '../components/bootstrap.min.css'
-import '../components/agency.css'
+import websiteContent from "../constants"
+import "../components/bootstrap.min.css"
+import "../components/agency.css"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -9,7 +10,11 @@ import '../components/agency.css'
 
 const IndexPage = () => (
   <>
-    <Nav />
+    <Nav
+      headerBtnLeft={websiteContent.headerBtnLeft}
+      headerBtns={websiteContent.headerBtns}
+    />
+
     {/* Nav
     Header
     Section
