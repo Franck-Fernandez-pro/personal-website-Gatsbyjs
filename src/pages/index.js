@@ -1,6 +1,8 @@
 import React from "react"
 import Nav from "../components/Nav"
 import websiteContent from "../constants"
+import HeaderSection from "../components/HeaderSection"
+
 import "../components/bootstrap.min.css"
 import "../components/agency.css"
 
@@ -14,9 +16,12 @@ const IndexPage = () => (
       headerBtnLeft={websiteContent.headerBtnLeft}
       headerBtns={websiteContent.headerBtns}
     />
+    <HeaderSection content={websiteContent.sections.home} />
 
-    {/* Nav
-    Header
+
+
+
+    {/*
     Section
     Section
     Section
