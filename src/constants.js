@@ -2,11 +2,26 @@ const websiteContent = {
   websiteTitle: 'Franck Fernandez - Développeur Web - Front et Back-end',
   headerBtnLeft: 'Franck Fernandez',
   headerBtns: [
-    'Atouts',
-    'Compétences',
-    'Mon parcours',
-    'Centres d\'intérêts',
-    'Contact',
+    {
+      text: 'Atouts',
+      href: '#atouts',
+    },
+    {
+      text: 'Compétences',
+      href: '#comp',
+    },
+    {
+      text: 'Mon parcours',
+      href: '#about',
+    },
+    {
+      text: 'Centres d\'intérêts',
+      href: '#interet',
+    },
+    {
+      text: 'Contact',
+      href: '#contact',
+    },
   ],
 
   sections: {
