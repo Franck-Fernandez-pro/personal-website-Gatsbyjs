@@ -61,49 +61,58 @@ const websiteContent = {
       ],
     },
 
-    // ----------------------------------------------------------
+    // ---------------------------------------------------------- COMPETENCES
     competences: {
       id: "comp",
       title: "Mes Compétences",
       content: [
         {
           title: "Développement Web",
+          revert: false,
           content:
             "Au cours de mes années d'études et sur différents projets professionnels, j'ai appris à maîtriser plusieurs langages de front-end HTML, CSS, JavaScript et framework tel que BootStrap et JQuery. De plus, j'ai été formé au back-end avec PHP, MySQL tout en optimisant le référencement (SEO).",
           circles: [
             {
               title: "HTML/CSS",
+              col:"col-md-6 col-sm-3 mb-3",
               style: "nopeQCB",
             },
             {
               title: "JS",
+              col:"col-md-6 col-sm-3",
               style: "nopeSJ",
             },
             {
               title: "PHP/SQL",
+              col:"col-md-6 col-sm-3",
               style: "nopeSCV",
             },
             {
               title: "SEO",
+              col:"col-md-6 col-sm-3",
               style: "nopeSCR",
             },
           ],
         },
         {
           title: "Graphisme",
+          revert: true,
           content:
             "Durant mon parcours, j'ai dû élargir mon champ de compétences en me formant sur des logiciels professionnels de retouche et de création numérique (suite Adobe).",
           circles: [
             {
               title: "Photoshop",
+              col:"col-md-6 col-sm-6 mb-3",
               style: "nopeSB",
             },
             {
               title: "Illustrator",
+              col:"col-md-6 col-sm-6",
               style: "nopeSJ",
             },
             {
               title: "Première",
+              col:"col-md-12 col-sm-6",
               style: "nopeCR",
             },
           ],
