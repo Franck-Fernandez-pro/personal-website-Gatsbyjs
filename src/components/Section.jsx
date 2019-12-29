@@ -16,7 +16,7 @@ const Section = ({ sectionID, bgLight, title, content }) => (
           content.map((item, key) => (
             <div key={key} className="col-md-4">
               <span className="fa-stack fa-4x">
-                <i className="fa fa-circle fa-stack-2x text-sec"></i>
+                <i className={`fa fa-circle fa-stack-2x ${item.iconColor}`}></i>
                 <i className={`fa ${item.icon} fa-stack-1x fa-inverse`}></i>
               </span>
               <h4 className="service-heading">{item.title}</h4>

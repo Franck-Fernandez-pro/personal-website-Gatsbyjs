@@ -42,18 +42,21 @@ const websiteContent = {
           content:
             "Je suis en mesure de réagir, m'adapter et rechercher des solutions face à des contraintes de manière rapide et autonome.",
           icon: "fa-compass",
+          iconColor: "text-sec",
         },
         {
           title: "Travail d'équipe",
           content:
             "Je sais m'intégrer rapidement dans une nouvelle équipe. De plus, je suis capable d'exposer clairement mon point de vue, contraintes et délais dans un projet.",
           icon: "fa-users",
+          iconColor: "text-sec",
         },
         {
           title: "Polyvalent",
           content:
             "Ayant mené des projets en petit effectif, j'ai appris à diversifier mes connaissances et compétences pour devenir un élément polyvalent.",
           icon: "fa-arrows-alt",
+          iconColor: "text-sec",
         },
       ],
     },
@@ -264,18 +267,21 @@ const websiteContent = {
           content:
             "Passionné depuis toujours, j'ai toujours été attiré a tout ce qui touche l'informatique et les nouvelles technologi.",
           icon: "fa-desktop",
+          iconColor: "text-primary",
         },
         {
           title: "Voyage",
           content:
             "Curieux des cultures étrangères, j'espère avoir l'opportunité dans les années à venir de voyager le plus possible dans des pays étrangers.",
           icon: "fa-globe",
+          iconColor: "text-primary",
         },
         {
           title: "Sport",
           content:
             "Soucieux d'une bonne santé, je pratique régulièrement des sports de montagne comme le ski, le vélo et la randonnée.",
           icon: "fa-heartbeat",
+          iconColor: "text-primary",
         },
       ],
     },

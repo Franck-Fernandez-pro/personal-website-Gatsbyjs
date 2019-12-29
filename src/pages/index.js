@@ -4,6 +4,7 @@ import websiteContent from "../constants"
 import HeaderSection from "../components/HeaderSection"
 import Section from "../components/Section"
 
+import "../css/font-awesome.min.css"
 import "../css/bootstrap.min.css"
 import "../css/agency.css"
 
@@ -22,6 +23,14 @@ const IndexPage = () => (
       id={websiteContent.sections.atouts.id}
       title={websiteContent.sections.atouts.title}
       content={websiteContent.sections.atouts.content}
+    />
+
+
+    <Section
+      bgLight
+      id={websiteContent.sections.interet.id}
+      title={websiteContent.sections.interet.title}
+      content={websiteContent.sections.interet.content}
     />
 
     {/*
