@@ -7,6 +7,7 @@ import Section from "../components/Section"
 import "../css/font-awesome.min.css"
 import "../css/bootstrap.min.css"
 import "../css/agency.css"
+import SectionCircle from "../components/SectionCircle"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -25,6 +26,12 @@ const IndexPage = () => (
       content={websiteContent.sections.atouts.content}
     />
 
+    <SectionCircle
+      bgLight
+      id={websiteContent.sections.competences.id}
+      title={websiteContent.sections.competences.title}
+      content={websiteContent.sections.competences.content}
+    />
 
     <Section
       bgLight
