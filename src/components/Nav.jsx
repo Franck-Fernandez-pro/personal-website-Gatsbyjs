@@ -1,10 +1,10 @@
 import React from "react"
 
-const Nav = (props) => (
+const Nav = ({ headerBtnLeft, headerBtns }) => (
   <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div className="container">
       <a className="navbar-brand js-scroll-trigger" href="#page-top">
-        Franck Fernandez
+        {headerBtnLeft}
       </a>
       <button
         className="navbar-toggler navbar-toggler-right"
@@ -19,31 +19,13 @@ const Nav = (props) => (
       </button>
       <div className="collapse navbar-collapse" id="navbarResponsive">
         <ul className="navbar-nav text-uppercase ml-auto">
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#atouts">
-              Atouts
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#comp">
-              Compétences
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#about">
-              Mon parcours
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#interet">
-              Centres d'intérêts
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#contact">
-              Contact
-            </a>
-          </li>
+          {headerBtns.map(({ text, href }, key) => (
+            <li key={key} className="nav-item">
+              <a className="nav-link js-scroll-trigger" href={href}>
+                {text}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
