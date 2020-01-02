@@ -3,6 +3,7 @@ import Nav from "../components/Nav"
 import websiteContent from "../constants"
 import HeaderSection from "../components/HeaderSection"
 import Section from "../components/Section"
+import BuildingPage from "./BuildingPage"
 
 import "../css/font-awesome.min.css"
 import "../css/bootstrap.min.css"
@@ -13,39 +14,40 @@ import SectionCircle from "../components/SectionCircle"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
+const isDev = true
+
 const IndexPage = () => (
   <>
-    <Nav
-      headerBtnLeft={websiteContent.headerBtnLeft}
-      headerBtns={websiteContent.headerBtns}
-    />
-    <HeaderSection content={websiteContent.sections.home} />
-    <Section
-      id={websiteContent.sections.atouts.id}
-      title={websiteContent.sections.atouts.title}
-      content={websiteContent.sections.atouts.content}
-    />
+    {isDev ? (
+      <BuildingPage />
+    ) : (
+      <>
+        <Nav
+          headerBtnLeft={websiteContent.headerBtnLeft}
+          headerBtns={websiteContent.headerBtns}
+        />
+        <HeaderSection content={websiteContent.sections.home} />
+        <Section
+          id={websiteContent.sections.atouts.id}
+          title={websiteContent.sections.atouts.title}
+          content={websiteContent.sections.atouts.content}
+        />
 
-    <SectionCircle
-      bgLight
-      id={websiteContent.sections.competences.id}
-      title={websiteContent.sections.competences.title}
-      content={websiteContent.sections.competences.content}
-    />
+        <SectionCircle
+          bgLight
+          id={websiteContent.sections.competences.id}
+          title={websiteContent.sections.competences.title}
+          content={websiteContent.sections.competences.content}
+        />
 
-    <Section
-      bgLight
-      id={websiteContent.sections.interet.id}
-      title={websiteContent.sections.interet.title}
-      content={websiteContent.sections.interet.content}
-    />
-
-    {/*
-    Section
-    Section
-    Section
-    Section
-    Footer */}
+        <Section
+          bgLight
+          id={websiteContent.sections.interet.id}
+          title={websiteContent.sections.interet.title}
+          content={websiteContent.sections.interet.content}
+        />
+      </>
+    )}
   </>
 )
 
