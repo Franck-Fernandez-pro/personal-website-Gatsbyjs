@@ -9,12 +9,13 @@ import "../css/font-awesome.min.css"
 import "../css/bootstrap.min.css"
 import "../css/agency.css"
 import SectionCircle from "../components/SectionCircle"
+import Footer from "../components/Footer"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
-const isDev = true
+const isDev = false
 
 const IndexPage = () => (
   <>
@@ -46,6 +47,8 @@ const IndexPage = () => (
           title={websiteContent.sections.interet.title}
           content={websiteContent.sections.interet.content}
         />
+
+        <Footer content={websiteContent.sections.footer.content} />
       </>
     )}
   </>
