@@ -43,7 +43,7 @@ const SectionCircle = ({ sectionID, bgLight, title, content }) => {
                   <Fragment key={key}>
                     {renderText(item)}
                     <div className="col-md-6 mb-5 d-none d-md-block">
-                      <div class="row">{renderCircles(item.circles)}</div>
+                      <div className="row">{renderCircles(item.circles)}</div>
                     </div>
                   </Fragment>
                 )
@@ -51,7 +51,7 @@ const SectionCircle = ({ sectionID, bgLight, title, content }) => {
                 return (
                   <Fragment key={key}>
                     <div className="col-md-6 mb-5 d-none d-md-block">
-                      <div class="row">{renderCircles(item.circles)}</div>
+                      <div className="row">{renderCircles(item.circles)}</div>
                     </div>
                     {renderText(item)}
                   </Fragment>
