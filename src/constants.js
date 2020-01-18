@@ -338,15 +338,12 @@ const websiteContent = {
     footer: {
       content: [
         {
-          text: "WARNING Copyright &copy; Franck Fernandez 2017 WARNING",
+          text: "Copyright © Franck Fernandez 2017",
           link: null,
         },
         {
-          text: null,
-          link: {
-            url: "https://getbootstrap.com/",
-            text: "Créé via BootStrap",
-          },
+          text: "Créé via BootStrap",
+          link: null,
         },
       ],
     },
