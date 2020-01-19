@@ -9,6 +9,7 @@ import "../css/font-awesome.min.css"
 import "../css/bootstrap.min.css"
 import "../css/agency.css"
 import SectionCircle from "../components/SectionCircle"
+import About from "../components/About"
 import Footer from "../components/Footer"
 
 // import Layout from "../components/layout"
@@ -40,6 +41,9 @@ const IndexPage = () => (
           title={websiteContent.sections.competences.title}
           content={websiteContent.sections.competences.content}
         />
+
+        {/* NEED CONTENT BY CONST */}
+        <About />
 
         <Section
           bgLight
