@@ -1,7 +1,9 @@
 import React from "react"
 
-const Section = ({ sectionID, bgLight, title, content }) => (
-  <section id={sectionID} className={bgLight && "bg-light"}>
+const Section = ({ id, bgLight, title, content }) => {
+  console.log('id', id)
+  return(
+  <section id={id} className={bgLight && "bg-light"}>
     <div className="container">
       <div className="row">
         <div className="col-lg-12 text-center">
@@ -26,6 +28,6 @@ const Section = ({ sectionID, bgLight, title, content }) => (
       </div>
     </div>
   </section>
-)
+)}
 
 export default Section

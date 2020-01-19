@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 
-const SectionCircle = ({ sectionID, bgLight, title, content }) => {
+const SectionCircle = ({ id, bgLight, title, content }) => {
   const renderText = ({ title, content }) => (
     <div className="col-md-6 col-sm-12 mt-5 pt-4">
       <h4 className="service-heading text-center">{title}</h4>
@@ -25,7 +25,7 @@ const SectionCircle = ({ sectionID, bgLight, title, content }) => {
     ))
 
   return (
-    <section id={sectionID} className={bgLight && "bg-light"}>
+    <section id={id} className={bgLight && "bg-light"}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center mb-5">
