@@ -1,7 +1,8 @@
 import React from "react"
 
+// "navbar-shrink" HARD CODED --> only on scroll
 const Nav = ({ headerBtnLeft, headerBtns }) => (
-  <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <nav className="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
     <div className="container">
       <a className="navbar-brand js-scroll-trigger" href="#page-top">
         {headerBtnLeft}
