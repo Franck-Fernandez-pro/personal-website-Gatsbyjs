@@ -16,7 +16,7 @@ import Footer from "../components/Footer"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
-const isDev = false
+const isDev = true
 
 const IndexPage = () => (
   <>
