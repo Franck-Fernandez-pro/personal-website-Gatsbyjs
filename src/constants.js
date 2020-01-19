@@ -75,22 +75,22 @@ const websiteContent = {
             {
               title: "HTML/CSS",
               col:"col-md-6 col-sm-3 mb-3",
-              style: "nopeQCB",
+              style: "progress  QCB",
             },
             {
               title: "JS",
               col:"col-md-6 col-sm-3",
-              style: "nopeSJ",
+              style: "progress  SJ",
             },
             {
               title: "PHP/SQL",
               col:"col-md-6 col-sm-3",
-              style: "nopeSCV",
+              style: "progress  SCV",
             },
             {
               title: "SEO",
               col:"col-md-6 col-sm-3",
-              style: "nopeSCR",
+              style: "progress  SCR",
             },
           ],
         },
@@ -103,17 +103,17 @@ const websiteContent = {
             {
               title: "Photoshop",
               col:"col-md-6 col-sm-6 mb-3",
-              style: "nopeSB",
+              style: "progress  SB",
             },
             {
               title: "Illustrator",
               col:"col-md-6 col-sm-6",
-              style: "nopeSJ",
+              style: "progress  SJ",
             },
             {
               title: "Première",
               col:"col-md-12 col-sm-6",
-              style: "nopeCR",
+              style: "progress  CR",
             },
           ],
         },

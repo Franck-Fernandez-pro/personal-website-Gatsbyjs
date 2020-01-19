@@ -11,8 +11,7 @@ const SectionCircle = ({ id, bgLight, title, content }) => {
   const renderCircles = circles =>
     circles.map((circle, key) => (
       <div key={key} className={circle.col}>
-        {/* <div className={circle.style}> */}
-        <div className="progress QCB">
+        <div className={circle.style}>
           <span className="progress-left">
             <span className="progress-bar"></span>
           </span>
