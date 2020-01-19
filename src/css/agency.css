@@ -718,8 +718,7 @@ ul.social-buttons {
 /*IMG*/
     .blizz {
         border-radius: 0% !important;
-        max-width: 77% !important;
-        padding-top: 35px !important;
+        margin: 33px 16px;
     }
 
 
