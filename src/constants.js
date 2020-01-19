@@ -18,10 +18,10 @@ const websiteContent = {
       text: "Centres d'intérêts",
       href: "#interet",
     },
-    {
-      text: "Contact",
-      href: "#contact",
-    },
+    // {
+    //   text: "Contact",
+    //   href: "#contact",
+    // },
   ],
 
   sections: {
