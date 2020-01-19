@@ -1,8 +1,6 @@
 import React from "react"
 
-const Section = ({ id, bgLight, title, content }) => {
-  console.log('id', id)
-  return(
+const Section = ({ id, bgLight, title, content }) => (
   <section id={id} className={bgLight && "bg-light"}>
     <div className="container">
       <div className="row">
@@ -28,6 +26,6 @@ const Section = ({ id, bgLight, title, content }) => {
       </div>
     </div>
   </section>
-)}
+)
 
 export default Section
