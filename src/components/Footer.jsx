@@ -10,7 +10,6 @@ const Footer = ({ content }) => (
               <span className="copyright">{text}</span>
             </div>
           ))}
-        {console.log("content", content)}
       </div>
     </div>
   </footer>
