@@ -11,8 +11,18 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap"
+          rel="stylesheet"
+        />
         {props.headComponents}
+        {/* LINKDIN */}
+        <script
+          type="text/javascript"
+          src="https://platform.linkedin.com/badges/js/profile.js"
+          async
+          defer
+        ></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
