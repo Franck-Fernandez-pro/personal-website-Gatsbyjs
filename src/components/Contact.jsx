@@ -18,10 +18,15 @@ export default function Contact() {
   const phone = useInput("")
   const message = useInput("")
 
+  const [requestPending, setRequestPending] = useState(false)
+  const [requestSuccess, setRequestSuccess] = useState(false)
+  const [requestError, setRequestError] = useState(false)
+
   function handleSubmit(e) {
     e.preventDefault()
 
     if (name.value && mail.value && phone.value && message.value) {
+      setRequestPending(true)
       axios
         .post("https://agile-hollows-25672.herokuapp.com/sendMail", {
           name: name.value,
@@ -30,6 +35,8 @@ export default function Contact() {
           message: message.value,
         })
         .then(response => {
+          setRequestPending(false)
+          setRequestSuccess(true)
           console.log(response)
         })
         .catch(error => {
@@ -40,27 +47,22 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contactez moi !</h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12 text-center">
+            <h2 className="section-heading text-uppercase">Contactez moi !</h2>
             <hr />
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-12">
-            <form
-              id="contactForm"
-              name="sentMessage"
-              novalidate
-              onSubmit={handleSubmit}
-            >
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
+        <div className="row">
+          <div className="col-lg-12">
+            <form id="contactForm" name="sentMessage" onSubmit={handleSubmit}>
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="form-group">
                     <input
-                      class="form-control"
+                      className="form-control"
                       id="name"
                       type="text"
                       placeholder="Votre nom"
@@ -68,11 +70,11 @@ export default function Contact() {
                       data-validation-required-message="Veuillez entrer votre nom"
                       {...name}
                     />
-                    <p class="help-block text-danger"></p>
+                    <p className="help-block text-danger"></p>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
-                      class="form-control"
+                      className="form-control"
                       id="email"
                       type="email"
                       placeholder="Votre E-mail"
@@ -80,11 +82,11 @@ export default function Contact() {
                       data-validation-required-message="Veuillez entrer votre mail"
                       {...mail}
                     />
-                    <p class="help-block text-danger"></p>
+                    <p className="help-block text-danger"></p>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <input
-                      class="form-control"
+                      className="form-control"
                       id="phone"
                       type="tel"
                       placeholder="Votre téléphone"
@@ -92,26 +94,26 @@ export default function Contact() {
                       data-validation-required-message="Veuillez entrer votre numéro de téléphone"
                       {...phone}
                     />
-                    <p class="help-block text-danger"></p>
+                    <p className="help-block text-danger"></p>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="form-group">
+                <div className="col-md-4">
+                  <div className="form-group">
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="message"
                       placeholder="Votre message"
                       required
                       data-validation-required-message="Veuillez écrire votre message"
                       {...message}
                     ></textarea>
-                    <p class="help-block text-danger"></p>
+                    <p className="help-block text-danger"></p>
                   </div>
                 </div>
 
-                <div class="col-md-4">
+                <div className="col-md-4">
                   <div
-                    class="LI-profile-badge"
+                    className="LI-profile-badge"
                     data-version="v1"
                     data-size="large"
                     data-locale="fr_FR"
@@ -120,7 +122,7 @@ export default function Contact() {
                     data-vanity="franck-fernandez-31b393161"
                   >
                     <a
-                      class="LI-simple-link"
+                      className="LI-simple-link"
                       href="https://fr.linkedin.com/in/franck-fernandez-31b393161?trk=profile-badge"
                       target="_blank"
                     >
@@ -129,16 +131,30 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
+                <div className="clearfix"></div>
+                <div className="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button
-                    id="sendMessageButton"
-                    class="btn btn-primary btn-xl text-uppercase"
-                    type="submit"
-                  >
-                    Envoyer
-                  </button>
+
+                  {requestPending && (
+                    <div className="btn btn-primary btn-xl text-uppercase">
+                      <i className="fa fa-circle-o-notch fa-spin" />
+                    </div>
+                  )}
+                  {requestSuccess && (
+                    <div className="btn btn-success btn-xl text-uppercase">
+                      Message envoyé !
+                    </div>
+                  )}
+
+                  {!requestSuccess && !requestPending && !requestError && (
+                    <button
+                      id="sendMessageButton"
+                      className="btn btn-primary btn-xl text-uppercase"
+                      type="submit"
+                    >
+                      Envoyer
+                    </button>
+                  )}
                 </div>
               </div>
             </form>

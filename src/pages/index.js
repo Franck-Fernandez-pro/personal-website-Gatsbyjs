@@ -17,7 +17,7 @@ import Contact from "../components/Contact"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
-const isDev = true
+const isDev = false
 
 const IndexPage = () => (
   <>
@@ -53,6 +53,7 @@ const IndexPage = () => (
           content={websiteContent.sections.interet.content}
         />
 
+        {/* NEED CONTENT BY CONST */}
         <Contact />
 
         <Footer content={websiteContent.sections.footer.content} />
