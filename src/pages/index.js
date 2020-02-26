@@ -11,6 +11,7 @@ import "../css/agency.css"
 import SectionCircle from "../components/SectionCircle"
 import About from "../components/About"
 import Footer from "../components/Footer"
+import Contact from "../components/Contact"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -51,6 +52,8 @@ const IndexPage = () => (
           title={websiteContent.sections.interet.title}
           content={websiteContent.sections.interet.content}
         />
+
+        <Contact />
 
         <Footer content={websiteContent.sections.footer.content} />
       </>
