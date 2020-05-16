@@ -17,6 +17,7 @@ export default function Contact() {
   const mail = useInput("")
   const phone = useInput("")
   const message = useInput("")
+  const dirtyCaptcha = useInput("")
 
   const [requestPending, setRequestPending] = useState(false)
   const [requestSuccess, setRequestSuccess] = useState(false)
@@ -25,7 +26,13 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault()
 
-    if (name.value && mail.value && phone.value && message.value) {
+    if (
+      name.value &&
+      mail.value &&
+      phone.value &&
+      message.value &&
+      dirtyCaptcha.value == 4
+    ) {
       setRequestPending(true)
       axios
         .post("https://agile-hollows-25672.herokuapp.com/sendMail", {
@@ -133,6 +140,21 @@ export default function Contact() {
 
                 <div className="clearfix"></div>
                 <div className="col-lg-12 text-center">
+                  <div className="form-group">
+                    <input
+                      className="form-control"
+                      style={{
+                        maxWidth: "130px",
+                        margin: "auto",
+                      }}
+                      id="dirtyCaptcha"
+                      type="number"
+                      placeholder="2 + 2"
+                      required
+                      {...dirtyCaptcha}
+                    />
+                    <p className="help-block text-danger"></p>
+                  </div>
                   <div id="success"></div>
 
                   {requestPending && (
