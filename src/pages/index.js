@@ -12,6 +12,7 @@ import SectionCircle from "../components/SectionCircle"
 import About from "../components/About"
 import Footer from "../components/Footer"
 import Contact from "../components/Contact"
+import { useStaticQuery, graphql } from "gatsby"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -19,48 +20,80 @@ import Contact from "../components/Contact"
 
 const isDev = false
 
-const IndexPage = () => (
-  <>
-    {isDev ? (
-      <BuildingPage />
-    ) : (
-      <>
-        <Nav
-          headerBtnLeft={websiteContent.headerBtnLeft}
-          headerBtns={websiteContent.headerBtns}
-        />
-        <HeaderSection />
-        <Section
-          id={websiteContent.sections.atouts.id}
-          title={websiteContent.sections.atouts.title}
-          content={websiteContent.sections.atouts.content}
-        />
+const IndexPage = (props) => {
+  const skills = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            path: { regex: "/(skills)/.*\\\\.md$/", ne: "/skills/_skills.md" }
+          }
+        }
+        sort: { fields: frontmatter___order }
+      ) {
+        nodes {
+          frontmatter {
+            path
+            title
+            content
+            icon
+            iconColor
+          }
+        }
+      }
+      markdownRemark(frontmatter: { path: { eq: "/skills/_skills.md" } }) {
+        frontmatter {
+          path
+          title
+          sectionId
+        }
+      }
+    }
+  `)
 
-        <SectionCircle
-          bgLight
-          id={websiteContent.sections.competences.id}
-          title={websiteContent.sections.competences.title}
-          content={websiteContent.sections.competences.content}
-        />
+  return (
+    <>
+      {isDev ? (
+        <BuildingPage />
+      ) : (
+        <>
+          <Nav
+            headerBtnLeft={websiteContent.headerBtnLeft}
+            headerBtns={websiteContent.headerBtns}
+          />
+          <HeaderSection />
+          <Section
+            id={skills.markdownRemark.frontmatter.sectionId}
+            title={skills.markdownRemark.frontmatter.title}
+            content={skills.allMarkdownRemark.nodes}
+          />
 
-        {/* NEED CONTENT BY CONST */}
-        <About />
+          <SectionCircle
+            bgLight
+            id={websiteContent.sections.competences.id}
+            title={websiteContent.sections.competences.title}
+            content={websiteContent.sections.competences.content}
+          />
 
-        <Section
+          {/* NEED CONTENT BY CONST */}
+          <About />
+
+          {/* <Section
           bgLight
           id={websiteContent.sections.interet.id}
           title={websiteContent.sections.interet.title}
           content={websiteContent.sections.interet.content}
-        />
+        /> */}
 
-        {/* NEED CONTENT BY CONST */}
-        <Contact />
+          {/* NEED CONTENT BY CONST */}
+          <Contact />
 
-        <Footer content={websiteContent.sections.footer.content} />
-      </>
-    )}
-  </>
-)
+          <Footer content={websiteContent.sections.footer.content} />
+        </>
+      )}
+    </>
+  )
+}
 
 // const IndexPage = () => (
 //   <Layout>
