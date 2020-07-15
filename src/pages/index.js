@@ -29,7 +29,7 @@ const IndexPage = () => (
           headerBtnLeft={websiteContent.headerBtnLeft}
           headerBtns={websiteContent.headerBtns}
         />
-        <HeaderSection content={websiteContent.sections.home} />
+        <HeaderSection />
         <Section
           id={websiteContent.sections.atouts.id}
           title={websiteContent.sections.atouts.title}
