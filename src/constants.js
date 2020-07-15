@@ -267,33 +267,33 @@ const websiteContent = {
     },
 
     // ---------------------------------------------------------- INTERET
-    interet: {
-      id: "interet",
-      title: "Centres d'intérêts",
-      content: [
-        {
-          title: "Informatique",
-          content:
-            "Passionné depuis toujours, j'ai toujours été attiré a tout ce qui touche l'informatique et les nouvelles technologi.",
-          icon: "fa-desktop",
-          iconColor: "text-primary",
-        },
-        {
-          title: "Voyage",
-          content:
-            "Curieux des cultures étrangères, j'espère avoir l'opportunité dans les années à venir de voyager le plus possible dans des pays étrangers.",
-          icon: "fa-globe",
-          iconColor: "text-primary",
-        },
-        {
-          title: "Sport",
-          content:
-            "Soucieux d'une bonne santé, je pratique régulièrement des sports de montagne comme le ski, le vélo et la randonnée.",
-          icon: "fa-heartbeat",
-          iconColor: "text-primary",
-        },
-      ],
-    },
+    // interet: {
+    //   id: "interet",
+    //   title: "Centres d'intérêts",
+    //   content: [
+    //     {
+    //       title: "Informatique",
+    //       content:
+    //         "Passionné depuis toujours, j'ai toujours été attiré a tout ce qui touche l'informatique et les nouvelles technologi.",
+    //       icon: "fa-desktop",
+    //       iconColor: "text-primary",
+    //     },
+    //     {
+    //       title: "Voyage",
+    //       content:
+    //         "Curieux des cultures étrangères, j'espère avoir l'opportunité dans les années à venir de voyager le plus possible dans des pays étrangers.",
+    //       icon: "fa-globe",
+    //       iconColor: "text-primary",
+    //     },
+    //     {
+    //       title: "Sport",
+    //       content:
+    //         "Soucieux d'une bonne santé, je pratique régulièrement des sports de montagne comme le ski, le vélo et la randonnée.",
+    //       icon: "fa-heartbeat",
+    //       iconColor: "text-primary",
+    //     },
+    //   ],
+    // },
 
     // ---------------------------------------------------------- CONTACT
     contact: {
