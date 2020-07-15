@@ -26,11 +26,11 @@ const websiteContent = {
 
   sections: {
     // ---------------------------------------------------------- HOME
-    home: {
-      title: "Franck Fernandez",
-      content: "Développeur Intégrateur web",
-      btnContent: "Jeter un coup d'oeil",
-    },
+    // home: {
+    //   title: "Franck Fernandez",
+    //   content: "Développeur Intégrateur web",
+    //   btnContent: "Jeter un coup d'oeil",
+    // },
 
     // ---------------------------------------------------------- ATOUTS
     atouts: {
