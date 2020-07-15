@@ -14,18 +14,18 @@ const Section = ({ id, bgLight, title, content }) => {
 
         <div className="row text-center">
           {content &&
-            content.map((item, key) => (
-              <div key={key} className="col-md-4">
-                <span className="fa-stack fa-4x">
-                  <i
-                    className={`fa fa-circle fa-stack-2x ${item.iconColor}`}
-                  ></i>
-                  <i className={`fa ${item.icon} fa-stack-1x fa-inverse`}></i>
-                </span>
-                <h4 className="service-heading">{item.title}</h4>
-                <p className="text-muted">{item.content}</p>
-              </div>
-            ))}
+            content.map(
+              ({ frontmatter: { iconColor, icon, title, content } }, key) => (
+                <div key={key} className="col-md-4">
+                  <span className="fa-stack fa-4x">
+                    <i className={`fa fa-circle fa-stack-2x ${iconColor}`}></i>
+                    <i className={`fa ${icon} fa-stack-1x fa-inverse`}></i>
+                  </span>
+                  <h4 className="service-heading">{title}</h4>
+                  <p className="text-muted">{content}</p>
+                </div>
+              )
+            )}
         </div>
       </div>
     </section>
