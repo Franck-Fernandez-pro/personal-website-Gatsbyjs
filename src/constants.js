@@ -33,33 +33,33 @@ const websiteContent = {
     // },
 
     // ---------------------------------------------------------- ATOUTS
-    atouts: {
-      id: "atouts",
-      title: "Mes Atouts",
-      content: [
-        {
-          title: "Autonome",
-          content:
-            "Je suis en mesure de réagir, m'adapter et rechercher des solutions face à des contraintes de manière rapide et autonome.",
-          icon: "fa-compass",
-          iconColor: "text-sec",
-        },
-        {
-          title: "Travail d'équipe",
-          content:
-            "Je sais m'intégrer rapidement dans une nouvelle équipe. De plus, je suis capable d'exposer clairement mon point de vue, contraintes et délais dans un projet.",
-          icon: "fa-users",
-          iconColor: "text-sec",
-        },
-        {
-          title: "Polyvalent",
-          content:
-            "Ayant mené des projets en petit effectif, j'ai appris à diversifier mes connaissances et compétences pour devenir un élément polyvalent.",
-          icon: "fa-arrows-alt",
-          iconColor: "text-sec",
-        },
-      ],
-    },
+    // atouts: {
+    //   id: "atouts",
+    //   title: "Mes Atouts",
+    //   content: [
+    //     {
+    //       title: "Autonome",
+    //       content:
+    //         "Je suis en mesure de réagir, m'adapter et rechercher des solutions face à des contraintes de manière rapide et autonome.",
+    //       icon: "fa-compass",
+    //       iconColor: "text-sec",
+    //     },
+    //     {
+    //       title: "Travail d'équipe",
+    //       content:
+    //         "Je sais m'intégrer rapidement dans une nouvelle équipe. De plus, je suis capable d'exposer clairement mon point de vue, contraintes et délais dans un projet.",
+    //       icon: "fa-users",
+    //       iconColor: "text-sec",
+    //     },
+    //     {
+    //       title: "Polyvalent",
+    //       content:
+    //         "Ayant mené des projets en petit effectif, j'ai appris à diversifier mes connaissances et compétences pour devenir un élément polyvalent.",
+    //       icon: "fa-arrows-alt",
+    //       iconColor: "text-sec",
+    //     },
+    //   ],
+    // },
 
     // ---------------------------------------------------------- COMPETENCES
     competences: {
