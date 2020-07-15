@@ -21,9 +21,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const isDev = false
 
 const IndexPage = (props) => {
-  const skills = useStaticQuery(graphql`
+  const {
+    skills,
+    skillsIndex,
+    interests,
+    interestsIndex,
+  } = useStaticQuery(graphql`
     {
-      allMarkdownRemark(
+      skills: allMarkdownRemark(
         filter: {
           frontmatter: {
             path: { regex: "/(skills)/.*\\\\.md$/", ne: "/skills/_skills.md" }
@@ -41,7 +46,39 @@ const IndexPage = (props) => {
           }
         }
       }
-      markdownRemark(frontmatter: { path: { eq: "/skills/_skills.md" } }) {
+      skillsIndex: markdownRemark(
+        frontmatter: { path: { eq: "/skills/_skills.md" } }
+      ) {
+        frontmatter {
+          path
+          title
+          sectionId
+        }
+      }
+      interests: allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            path: {
+              regex: "/(interests)/.*\\\\.md$/"
+              ne: "/interests/_interests.md"
+            }
+          }
+        }
+        sort: { fields: frontmatter___order }
+      ) {
+        nodes {
+          frontmatter {
+            path
+            title
+            content
+            icon
+            iconColor
+          }
+        }
+      }
+      interestsIndex: markdownRemark(
+        frontmatter: { path: { eq: "/interests/_interests.md" } }
+      ) {
         frontmatter {
           path
           title
@@ -63,9 +100,9 @@ const IndexPage = (props) => {
           />
           <HeaderSection />
           <Section
-            id={skills.markdownRemark.frontmatter.sectionId}
-            title={skills.markdownRemark.frontmatter.title}
-            content={skills.allMarkdownRemark.nodes}
+            id={skillsIndex.frontmatter.sectionId}
+            title={skillsIndex.frontmatter.title}
+            content={skills.nodes}
           />
 
           <SectionCircle
@@ -78,12 +115,12 @@ const IndexPage = (props) => {
           {/* NEED CONTENT BY CONST */}
           <About />
 
-          {/* <Section
-          bgLight
-          id={websiteContent.sections.interet.id}
-          title={websiteContent.sections.interet.title}
-          content={websiteContent.sections.interet.content}
-        /> */}
+          <Section
+            bgLight
+            id={interestsIndex.frontmatter.sectionId}
+            title={interestsIndex.frontmatter.title}
+            content={interests.nodes}
+          />
 
           {/* NEED CONTENT BY CONST */}
           <Contact />
