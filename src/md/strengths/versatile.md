@@ -1,5 +1,5 @@
 ---
-path: "/skills/versatile.md"
+path: "/strengths/versatile.md"
 order: 2
 title: "Polyvalent"
 content: "Ayant mené des projets en petit effectif, j'ai appris à diversifier mes connaissances et compétences pour devenir un élément polyvalent."

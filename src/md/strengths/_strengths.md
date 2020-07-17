@@ -1,5 +1,5 @@
 ---
-path: "/skills/_skills.md"
+path: "/strengths/_strengths.md"
 title: "Mes Atouts"
 sectionId: "atouts"
 ---
