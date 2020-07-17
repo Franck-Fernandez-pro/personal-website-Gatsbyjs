@@ -31,7 +31,10 @@ const IndexPage = (props) => {
       strengths: allMarkdownRemark(
         filter: {
           frontmatter: {
-            path: { regex: "/(strengths)/.*\\\\.md$/", ne: "/strengths/_strengths.md" }
+            path: {
+              regex: "/(strengths)/.*\\\\.md$/"
+              ne: "/strengths/_strengths.md"
+            }
           }
         }
         sort: { fields: frontmatter___order }
