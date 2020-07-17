@@ -26,6 +26,9 @@ const IndexPage = (props) => {
     strengthsIndex,
     interests,
     interestsIndex,
+    skillsIndex,
+    frontIndex,
+    frontItems,
   } = useStaticQuery(graphql`
     {
       strengths: allMarkdownRemark(
@@ -86,6 +89,46 @@ const IndexPage = (props) => {
           path
           title
           sectionId
+        }
+      }
+
+      skillsIndex: markdownRemark(
+        frontmatter: { path: { eq: "/skills/_skills.md" } }
+      ) {
+        frontmatter {
+          path
+          title
+          sectionId
+        }
+      }
+      frontIndex: markdownRemark(
+        frontmatter: { path: { eq: "/skills/front/_front.md" } }
+      ) {
+        frontmatter {
+          path
+          title
+          active
+          revert
+        }
+      }
+      frontItems: allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            path: {
+              regex: "/(front)/.*\\\\.md$/"
+              ne: "/skills/front/_front.md"
+            }
+          }
+        }
+        sort: { fields: frontmatter___order }
+      ) {
+        nodes {
+          frontmatter {
+            path
+            title
+            col
+            style
+          }
         }
       }
     }
