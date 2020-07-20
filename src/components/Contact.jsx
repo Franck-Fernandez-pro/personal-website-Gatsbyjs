@@ -132,6 +132,7 @@ export default function Contact() {
                       className="LI-simple-link"
                       href="https://fr.linkedin.com/in/franck-fernandez-31b393161?trk=profile-badge"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Franck Fernandez
                     </a>
