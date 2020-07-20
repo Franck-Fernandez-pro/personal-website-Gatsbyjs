@@ -773,6 +773,38 @@ ul.social-buttons li a:hover {
   animation: loading-75 1.2s linear forwards 1.8s;
 }
 
+.progress.gatsby-color .progress-bar {
+  border-color: #542c85;
+}
+.progress.gatsby-color .progress-left .progress-bar {
+  animation: loading-75 1.2s linear forwards 1.8s;
+}
+
+.progress.react-color .progress-bar {
+  border-color: #61dafb;
+}
+.progress.react-color .progress-left .progress-bar {
+  animation: loading-90 1.2s linear forwards 1.8s;
+}
+
+.progress.node-color .progress-bar {
+  border-color: #fdba04;
+}
+.progress.node-color .progress-left .progress-bar {
+  animation: loading-75 1.2s linear forwards 1.8s;
+}
+
+@keyframes loading-90 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
 @keyframes loading-85 {
   0% {
     -webkit-transform: rotate(0deg);

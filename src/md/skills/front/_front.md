@@ -1,6 +1,6 @@
 ---
 path: "/skills/front/_front.md"
-title: "Front (React 90%, GatsbyJS  75%, NodeJS 75%)"
+title: "Front"
 active: false
 revert: false
 ---
