@@ -12,6 +12,7 @@ import SectionCircle from "../components/SectionCircle"
 import About from "../components/About"
 import Footer from "../components/Footer"
 import Contact from "../components/Contact"
+import Card from "../components/Card"
 import { useStaticQuery, graphql } from "gatsby"
 
 // import Layout from "../components/layout"
@@ -110,6 +111,7 @@ const IndexPage = (props) => {
           active
           revert
         }
+        html
       }
       frontItems: allMarkdownRemark(
         filter: {
@@ -134,6 +136,38 @@ const IndexPage = (props) => {
     }
   `)
 
+  console.group("QUERY")
+  console.log("skillsIndex,", skillsIndex)
+  console.log("frontIndex,", frontIndex)
+  console.log("frontItems,", frontItems)
+  console.groupEnd()
+
+// ! NEED TO CLEAN
+  const renderText = (title, html) => (
+    <div className="col-md-6 col-sm-12">
+      <h4 className="service-heading text-center">{title}</h4>
+      <div
+        className="text-muted text-center"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </div>
+  )
+// ! NEED TO CLEAN
+  const renderCircles = (nodes) =>
+    nodes.map(({ frontmatter: { title, col, style } }, key) => (
+      <div key={key} className={col}>
+        <div className={style}>
+          <span className="progress-left">
+            <span className="progress-bar"></span>
+          </span>
+          <span className="progress-right">
+            <span className="progress-bar"></span>
+          </span>
+          <div className="progress-value">{title}</div>
+        </div>
+      </div>
+    ))
+
   return (
     <>
       {isDev ? (
@@ -148,15 +182,40 @@ const IndexPage = (props) => {
           <Section
             id={strengthsIndex.frontmatter.sectionId}
             title={strengthsIndex.frontmatter.title}
-            content={strengths.nodes}
-          />
+          >
+            {strengths.nodes &&
+              strengths.nodes.map(
+                ({ frontmatter: { iconColor, icon, title, content } }, key) => (
+                  <Card
+                    key={key}
+                    iconColor={iconColor}
+                    icon={icon}
+                    title={title}
+                    content={content}
+                  />
+                )
+              )}
+          </Section>
 
-          <SectionCircle
+          {/* <SectionCircle
             bgLight
             id={websiteContent.sections.competences.id}
             title={websiteContent.sections.competences.title}
             content={websiteContent.sections.competences.content}
-          />
+          /> */}
+
+          {/* CIRCLE SECTION */}
+          {/* // ! NEED TO CLEAN */}
+          <Section
+            bgLight
+            id={skillsIndex.frontmatter.sectionId}
+            title={skillsIndex.frontmatter.title}
+          >
+            {renderText(frontIndex.frontmatter.title, frontIndex.html)}
+            <div className="col-md-6 mb-5 d-none d-md-block">
+              <div className="row">{renderCircles(frontItems.nodes)}</div>
+            </div>
+          </Section>
 
           {/* NEED CONTENT BY CONST */}
           <About />
@@ -165,8 +224,20 @@ const IndexPage = (props) => {
             bgLight
             id={interestsIndex.frontmatter.sectionId}
             title={interestsIndex.frontmatter.title}
-            content={interests.nodes}
-          />
+          >
+            {interests.nodes &&
+              interests.nodes.map(
+                ({ frontmatter: { iconColor, icon, title, content } }, key) => (
+                  <Card
+                    key={key}
+                    iconColor={iconColor}
+                    icon={icon}
+                    title={title}
+                    content={content}
+                  />
+                )
+              )}
+          </Section>
 
           {/* NEED CONTENT BY CONST */}
           <Contact />
