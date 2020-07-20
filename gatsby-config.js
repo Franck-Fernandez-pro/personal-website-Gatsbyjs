@@ -7,6 +7,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-transformer-remark`,
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -18,6 +21,13 @@ module.exports = {
       options: {
         name: `static`,
         path: `${__dirname}/src/static`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `md`,
+        path: `${__dirname}/src/md`,
       },
     },
     `gatsby-transformer-sharp`,

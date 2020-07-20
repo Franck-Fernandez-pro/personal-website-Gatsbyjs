@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const About = props => {
+const About = (props) => {
   const data = useStaticQuery(graphql`
     query {
       AUVERGNE_COMM: file(
@@ -166,6 +166,7 @@ const About = props => {
                       <a
                         href="https://www.ladepeche.fr/article/2015/10/01/2188462-rencontres-internationales-sur-la-biodiversite-et-les-milieux-naturels.html"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         Article de Ladépêche
                       </a>
@@ -258,7 +259,11 @@ const About = props => {
                       particuliers.
                     </p>
                     <em>
-                      <a href="http://www.in-sport.fr/" target="_blank">
+                      <a
+                        href="http://www.in-sport.fr/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Visiter le site
                       </a>
                     </em>
@@ -284,7 +289,7 @@ const About = props => {
                       Afin de finaliser mon DUT, j'ai réalisé un stage de 12
                       semaines au sein de l'entreprise{" "}
                       <em>
-                        <a href="http://www.blizz.fr/" target="_blank">
+                        <a href="http://www.blizz.fr/" rel="noreferrer">
                           Blizz
                         </a>
                       </em>{" "}
@@ -317,7 +322,11 @@ const About = props => {
                       Web. J'ai choisi de réaliser ma licence en alternance
                       auprès de l'entreprise{" "}
                       <em>
-                        <a href="https://www.skewerlab.com" target="_blank">
+                        <a
+                          href="https://www.skewerlab.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           SkewerLab
                         </a>
                       </em>
@@ -330,7 +339,7 @@ const About = props => {
               <li className="timeline-inverted">
                 <div className="timeline-image">
                   <h4>
-                    <a href={CV} target="_blank">
+                    <a href={CV} target="_blank" rel="noreferrer">
                       Téléchargez
                       <br />
                       mon CV
