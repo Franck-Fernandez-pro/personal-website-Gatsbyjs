@@ -29,6 +29,8 @@ const IndexPage = (props) => {
     skillsIndex,
     frontIndex,
     frontItems,
+    graphic_designIndex,
+    graphic_designItems,
   } = useStaticQuery(graphql`
     {
       strengths: allMarkdownRemark(
@@ -132,6 +134,38 @@ const IndexPage = (props) => {
           }
         }
       }
+
+      graphic_designIndex: markdownRemark(
+        frontmatter: {
+          path: { eq: "/skills/graphic_design/_graphic_design.md" }
+        }
+      ) {
+        frontmatter {
+          title
+          active
+          revert
+        }
+        html
+      }
+      graphic_designItems: allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            path: {
+              regex: "/(graphic_design)/.*\\\\.md$/"
+              ne: "/skills/graphic_design/_graphic_design.md"
+            }
+          }
+        }
+        sort: { fields: frontmatter___order }
+      ) {
+        nodes {
+          frontmatter {
+            title
+            col
+            style
+          }
+        }
+      }
     }
   `)
 
@@ -208,6 +242,13 @@ const IndexPage = (props) => {
             <div className="col-md-6 mb-5 d-none d-md-block">
               <div className="row">{renderCircles(frontItems.nodes)}</div>
             </div>
+
+            <div className="col-md-6 mb-5 d-none d-md-block">
+              <div className="row">
+                {renderCircles(graphic_designItems.nodes)}
+              </div>
+            </div>
+            {renderText(graphic_designIndex.frontmatter.title, graphic_designIndex.html)}
           </Section>
 
           {/* NEED CONTENT BY CONST */}
