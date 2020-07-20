@@ -135,13 +135,7 @@ const IndexPage = (props) => {
     }
   `)
 
-  console.group("QUERY")
-  console.log("skillsIndex,", skillsIndex)
-  console.log("frontIndex,", frontIndex)
-  console.log("frontItems,", frontItems)
-  console.groupEnd()
-
-// ! NEED TO CLEAN
+  // ! NEED TO CLEAN
   const renderText = (title, html) => (
     <div className="col-md-6 col-sm-12">
       <h4 className="service-heading text-center">{title}</h4>
@@ -151,7 +145,7 @@ const IndexPage = (props) => {
       />
     </div>
   )
-// ! NEED TO CLEAN
+  // ! NEED TO CLEAN
   const renderCircles = (nodes) =>
     nodes.map(({ frontmatter: { title, col, style } }, key) => (
       <div key={key} className={col}>
