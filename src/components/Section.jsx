@@ -1,6 +1,6 @@
 import React from "react"
 
-const Section = ({ id, bgLight, title, content }) => {
+const Section = ({ id, bgLight, title, children }) => {
   return (
     <section id={id} className={bgLight && "bg-light"}>
       <div className="container">
@@ -13,19 +13,7 @@ const Section = ({ id, bgLight, title, content }) => {
         </div>
 
         <div className="row text-center">
-          {content &&
-            content.map(
-              ({ frontmatter: { iconColor, icon, title, content } }, key) => (
-                <div key={key} className="col-md-4">
-                  <span className="fa-stack fa-4x">
-                    <i className={`fa fa-circle fa-stack-2x ${iconColor}`}></i>
-                    <i className={`fa ${icon} fa-stack-1x fa-inverse`}></i>
-                  </span>
-                  <h4 className="service-heading">{title}</h4>
-                  <p className="text-muted">{content}</p>
-                </div>
-              )
-            )}
+          {children && children}
         </div>
       </div>
     </section>
