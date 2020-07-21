@@ -239,16 +239,21 @@ const IndexPage = (props) => {
             title={skillsIndex.frontmatter.title}
           >
             {renderText(frontIndex.frontmatter.title, frontIndex.html)}
-            <div className="col-md-6 mb-5 d-none d-md-block">
-              <div className="row">{renderCircles(frontItems.nodes)}</div>
+            <div className="col-md-6 mb-5">
+              <div className="row justify-content-center">
+                {renderCircles(frontItems.nodes)}
+              </div>
             </div>
 
-            <div className="col-md-6 mb-5 d-none d-md-block">
-              <div className="row">
+            <div className="col-md-6 mb-5">
+              <div className="row justify-content-center">
                 {renderCircles(graphic_designItems.nodes)}
               </div>
             </div>
-            {renderText(graphic_designIndex.frontmatter.title, graphic_designIndex.html)}
+            {renderText(
+              graphic_designIndex.frontmatter.title,
+              graphic_designIndex.html
+            )}
           </Section>
 
           {/* NEED CONTENT BY CONST */}
