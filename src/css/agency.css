@@ -879,3 +879,9 @@ ul.social-buttons li a:hover {
   border-radius: 0% !important;
   margin: 33px 16px;
 }
+
+.card-list ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
