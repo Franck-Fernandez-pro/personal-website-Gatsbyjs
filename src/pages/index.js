@@ -82,6 +82,7 @@ const IndexPage = (props) => {
             icon
             iconColor
           }
+          html
         }
       }
       interestsIndex: markdownRemark(
@@ -266,13 +267,14 @@ const IndexPage = (props) => {
           >
             {interests.nodes &&
               interests.nodes.map(
-                ({ frontmatter: { iconColor, icon, title, content } }, key) => (
+                ({ frontmatter: { iconColor, icon, title, content }, html }, key) => (
                   <Card
                     key={key}
                     iconColor={iconColor}
                     icon={icon}
                     title={title}
                     content={content}
+                    html={html}
                   />
                 )
               )}

@@ -12,7 +12,7 @@ const Section = ({ id, bgLight, title, children }) => {
           </div>
         </div>
 
-        <div className="row text-center">
+        <div className="row text-center justify-content-center">
           {children && children}
         </div>
       </div>
