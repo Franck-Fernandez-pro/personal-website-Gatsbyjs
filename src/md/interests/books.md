@@ -1,6 +1,6 @@
 ---
 path: "/interests/books.md"
-order: "3"
+order: 3
 title: Livres lus et recommandés
 content: ''
 icon: fa-book
