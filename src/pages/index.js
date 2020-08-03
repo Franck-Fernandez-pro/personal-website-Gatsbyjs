@@ -16,7 +16,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 // import Layout from "../components/layout"
 // import Image from "../components/image"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const isDev = false
 
@@ -198,6 +198,7 @@ const IndexPage = (props) => {
 
   return (
     <>
+      <SEO />
       {isDev ? (
         <BuildingPage />
       ) : (
@@ -267,7 +268,10 @@ const IndexPage = (props) => {
           >
             {interests.nodes &&
               interests.nodes.map(
-                ({ frontmatter: { iconColor, icon, title, content }, html }, key) => (
+                (
+                  { frontmatter: { iconColor, icon, title, content }, html },
+                  key
+                ) => (
                   <Card
                     key={key}
                     iconColor={iconColor}
@@ -292,7 +296,6 @@ const IndexPage = (props) => {
 
 // const IndexPage = () => (
 //   <Layout>
-//     <SEO title="Home" />
 //     <h1>Hi people</h1>
 //     <p>Welcome to your new Gatsby site.</p>
 //     <p>Now go build something great.</p>
