@@ -43,6 +43,33 @@ module.exports = {
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        // develop: true, // Enable while using `gatsby develop`
+        whitelist: [
+          "text-primary",
+          "col-6",
+          "fa-book",
+          "fa-desktop",
+          "fa-heartbeat",
+          "fa-globe",
+          "fa-globe",
+          "fa-compass",
+          "fa-users",
+          "fa-arrows-alt",
+          "progress",
+          "gatsby-color",
+          "node-color",
+          "react-color",
+          "SJ",
+          "SB",
+          "CR",
+          "text-sec",
+        ], // Don't remove this selector
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
