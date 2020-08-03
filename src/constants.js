@@ -1,5 +1,4 @@
 const websiteContent = {
-  websiteTitle: "Franck Fernandez - Développeur Web - Front et Back-end",
   headerBtnLeft: "Franck Fernandez",
   headerBtns: [
     {

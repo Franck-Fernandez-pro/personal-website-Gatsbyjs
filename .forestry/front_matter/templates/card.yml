@@ -1,0 +1,22 @@
+---
+label: Card
+hide_body: false
+fields:
+- type: text
+  name: path
+  label: path
+- type: number
+  name: order
+  label: order
+- type: text
+  name: title
+  label: title
+- type: text
+  name: content
+  label: content
+- type: text
+  name: icon
+  label: icon
+- type: text
+  name: iconColor
+  label: iconColor
