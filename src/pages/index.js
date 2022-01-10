@@ -18,7 +18,7 @@ import { useStaticQuery, graphql } from "gatsby"
 // import Image from "../components/image"
 import SEO from "../components/seo"
 
-const isDev = false
+const isDev = true
 
 const IndexPage = (props) => {
   const {
